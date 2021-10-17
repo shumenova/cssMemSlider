@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background: rgb(195 230 255);
+    padding: 15px;
+    font-size: 10px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+.main-title {
+    width: 60%;
+    height: 100px;
+    background: #939fce;
+    padding: 30px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0 auto;
+    font-size: 2.2rem;
+}
+
+.content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: #939fce;
+    row-gap: 20px;
+}
+
+.content input {
+    display: none;
+}
+
+.images {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.images img {
+    height: 700px;
+    width: 100%;
+    transition: all 0.15s ease;
+    background: #939fce;
+    padding: 10px;
+}
+
+.captions {
+    width: 50%;
+    overflow: hidden;
+    margin-left: 25px;
+}
+
+.caption-line {
+    display: flex;
+    transition: 1s ease;
+    width: 1000%;
+}
+
+.title {
+    width: 10%;
+    font-size: 2rem;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+}
+
+.dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid #000 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+}
+
+.dots label:hover {
+    background: #000;
+}
+
+
+#img1:checked ~ .images .m1 {
+    transform: translateX(0);
+}
+
+#img2:checked ~ .images .m2 {
+    transform: translateX(-100%);
+}
+
+#img3:checked ~ .images .m3 {
+    transform: translateX(-200%);
+}
+
+#img4:checked ~ .images .m4 {
+    transform: translateX(-300%);
+}
+
+#img1:checked ~ .captions .caption-line {
+    transform: translateX(0%);
+}
+
+#img2:checked ~ .captions .caption-line {
+    transform: translateX(-10%);
+}
+
+#img3:checked ~ .captions .caption-line {
+    transform: translateX(-20%);
+}
+#img4:checked ~ .captions .caption-line {
+    transform: translateX(-30%);
+}
+
+
+@media (max-width: 760px) {
+    .images img {
+        height: 400px;;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .captions {
+        order: 3;
+        width: 90%;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .images img {
+        height: 350px;
+    }
+}
+
+@media (max-width: 420px) {
+    .wrapper {
+        margin: 0 -70px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .images img {
+        height: 300px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    .images img {
+        height: 150px;
+    }
+
+    .captions {
+        width: 80%;
+        margin-left: 15px;
+    }
+
+    .title {
+        width: 10%;
+        font-size: 1rem;
+        margin-left: 0px;
+    }
+}
