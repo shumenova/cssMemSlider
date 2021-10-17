@@ -149,6 +149,18 @@ h1 {
     }
 }
 
+@media (max-width: 420px) {
+    .wrapper {
+        margin: 0 -70px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .images img {
+        height: 300px;
+    }
+}
+
 
 @media (max-width: 320px) {
     h1 {
